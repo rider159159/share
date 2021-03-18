@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,38 +17,44 @@
   <!-- End Facebook Opengraph -->\
   <title>Document</title>
 </head>
+
 <body>
   <button onclick="test()"> fb 分享</button>
   <button onclick="test2()"> fb 發送</button>
   <script>
     window.fbAsyncInit = function () {
-        FB.init({
-            appId: '148907290420637',
-            autoLogAppEvents: true,
-            xfbml: true,
-            version: 'v10.0'
-        });
+      FB.init({
+        appId: '148907290420637',
+        autoLogAppEvents: true,
+        xfbml: true,
+        version: 'v10.0'
+      });
     };
-</script>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+  </script>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
   <script>
-            function test() {
-            console.log(123);
+    function test() {
+      console.log(123);
 
-            FB.ui({
-                method: 'share',
-                display: 'popup',
+      FB.ui({
+        method: 'share',
+        display: 'popup',
 
-                href: 'https://rider159159.github.io/share'
-            }, function (response) { });
+        href: 'https://rider159159.github.io/share'
+      }, function (response) { });
 
-        }
-        function test2() {
-            FB.ui({
-                method: 'send',
-                link: 'https://rider159159.github.io/share',
-            });
-        }
+    }
+    function test2() {
+      FB.ui({
+        method: 'send',
+        link: 'https://rider159159.github.io/share',
+      });
+    }
+(function(){
+  window.location.href="https://bizthinking.com.tw"
+
+})()    
   </script>
 </body>
+
 </html>
